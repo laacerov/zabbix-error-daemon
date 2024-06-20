@@ -13,7 +13,7 @@ fi
 
 case $METRIC in
     'er_dia')
-        RESULT=$(/bin/sh /home/luis_acero/script_error_daemon.sh)
+        RESULT=$(/bin/sh /usr/src/sc_error_daemon.sh)
         echo "Result: $RESULT" >> $LOGFILE
         echo $RESULT
         ;;
