@@ -3,22 +3,17 @@
 
 METRIC="$1"
 
-LOGFILE="/tmp/zabbix_debug.log"
-echo "Metric: $METRIC" >> $LOGFILE
-
 if [ -z "$1" ]; then
-    echo "Please specify a metric" >> $LOGFILE
+    echo "Please specify a metric"
     exit 1
 fi
 
 case $METRIC in
-    'er_dia')
-        RESULT=$(/bin/sh /usr/src/sc_error_daemon.sh)
-        echo "Result: $RESULT" >> $LOGFILE
-        echo $RESULT
-        ;;
-    *)
-        echo "Not selected metric" >> $LOGFILE
+
+        'er_dia')       /bin/sh /usr/src/script_error_daemon.sh;;
+
+
+    *)  echo "Not selected metric"
         exit 0
         ;;
 esac
