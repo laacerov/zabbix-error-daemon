@@ -10,7 +10,7 @@ fi
 
 case $METRIC in
 
-        'er_dia')       /bin/sh /usr/src/script_error_daemon.sh;;
+        'er_dia')       /bin/sh /usr/src/sc_error_daemon.sh;;
 
 
     *)  echo "Not selected metric"
